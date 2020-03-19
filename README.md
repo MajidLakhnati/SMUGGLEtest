@@ -2,7 +2,7 @@
 # SMUGGLEtest
 
 ## Related Work
-This program is based on the work of [James Kettle](https://skeletonscribe.net/). If you are interested in HTTP desync attacks and HTTP Request Smuggling specifically, I highly advise you to check out the [HRS Blogpossts](https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn) on the PortSwigger web site if you have not read them yet.
+This program is based on the work of [James Kettle](https://skeletonscribe.net/). If you are interested in HTTP desync attacks and HTTP Request Smuggling specifically, I highly advise you to check out the [HRS Blogposts](https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn) on the PortSwigger web site if you have not read them yet.
 
 ## Description
 SMUGGLEtest is a Python 3 CLI program that automates the detection of **HTTP Request Smuggling** vulnerabilities.
