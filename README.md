@@ -13,7 +13,7 @@ SMUGGLEtest is able to scan for:
 * **Transfer-Encoding.Content-Length (TE.CL)** vulnerabilities
 * **Transfer-Encoding.Transfer-Encoding (TE.TE)** vulnerabilities
 
-TE.TE vulnerabilities are more complex and a desynchronization techniques are mandatory in order to detect them. The program utilizes a diversity of these desynchronization techniques and it attempts to find new desync techniques by combinining existing ones.
+TE.TE vulnerabilities are more complex and  **desynchronization techniques** are mandatory in order to detect them. The program utilizes a diversity of these desynchronization techniques and it attempts to find new desync techniques by combinining existing ones.
 
 ## Prerequisites
 
