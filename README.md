@@ -7,7 +7,13 @@ This program is based on the work of [James Kettle](https://skeletonscribe.net/)
 ## Description
 SMUGGLEtest is a Python 3 CLI program that automates the detection of **HTTP Request Smuggling** vulnerabilities.
 It bundles the detection of different HRS vulnerabilities on arbitrary web sites in a single Python 3 tool. This tool is suitable for scanning a single web site as well as mass scanning.
-SMUGGLEtest is able to scan for basic **Content-Length.Transfer-Encoding (CL.TE)** and **Transfer-Encoding.Content-Length (TE.CL)** vulnerabilities, and more complex **Transfer-Encoding.Transfer-Encoding (TE.TE)** vulnerabilities, where a desynchronization technique is mandatory. The program utilizes a diversity of these desynchronization techniques and it attempts to find new desync techniques by combinining existing ones.
+SMUGGLEtest is able to scan for:
+
+* **Content-Length.Transfer-Encoding (CL.TE)** vulnerabilities
+* **Transfer-Encoding.Content-Length (TE.CL)** vulnerabilities
+* **Transfer-Encoding.Transfer-Encoding (TE.TE)** vulnerabilities
+
+TE.TE vulnerabilities are more complex and a desynchronization techniques are mandatory in order to detect them. The program utilizes a diversity of these desynchronization techniques and it attempts to find new desync techniques by combinining existing ones.
 
 ## Prerequisites
 
