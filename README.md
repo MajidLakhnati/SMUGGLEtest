@@ -2,7 +2,8 @@
 # SMUGGLEtest
 
 ## Related Work
-This program is based on the work of [James Kettle](https://skeletonscribe.net/)
+This program is based on the work of [James Kettle](https://skeletonscribe.net/). If you are interested in HTTP desync attacks and HTTP Request Smuggling specifically, I highly advise you to check out the [HRS Blogpossts](https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn) on the PortSwigger web site if you have not read them yet.
+
 ## Description
 SMUGGLEtest is a Python 3 CLI program that automates the detection of **HTTP Request Smuggling** vulnerabilities.
 It bundles the detection of different HRS vulnerabilities on arbitrary web sites in a single Python 3 tool. This tool is suitable for scanning a single web site as well as mass scanning.
@@ -12,9 +13,9 @@ SMUGGLEtest is able to scan for basic **Content-Length.Transfer-Encoding (CL.TE)
 
 SMUGGLEtest only works with ```Python 3``` and has the following dependency:
 
-* ```Python Requests```
+* ```requests```
 
-If you have do not have the library [Python Requests](https://requests.readthedocs.io/en/master/) installed yet, just do
+If you have do not have the library [Python Requests](https://requests.readthedocs.io/en/master/) installed yet:
 
 ```pip3 install requests```
 
@@ -52,14 +53,14 @@ optional arguments:
 
 ## Example Output
 
-[Example output](https://github.com/MajidLakhnati/SMUGGLEtest/blob/master/tetenewresult1.png)
+![Example output](https://github.com/MajidLakhnati/SMUGGLEtest/blob/master/tetenewresult1.png)
 
 When SMUGGLEtest succesfully detects a HRS vulnerability, it provides the user with following information:
 
 *  **Vulnerability**: The type of the vulnerability that SMUGGLEtest detected.
 *  **URL**: The URL for which SMUGGLEtest found a vulnerability.
 *  **Description**: A brief description on how SMUGGLEtest managed to detect the vulnerability.
-*  **Complexity**: This states if the found vulnerability is of either **basic** or **advanced** complexity. SMUGGLEtest considers every vulnerability where a obfuscation of the Transfer-Encoding header is necessary, respectively a desync technique is mandatory, as an  **advanced** vuln.
+*  **Complexity**: This states if the found vulnerability is of either **basic** or **advanced** complexity. SMUGGLEtest considers every vulnerability, where a obfuscation of the Transfer-Encoding header is necessary, respectively a desync technique is mandatory, as an  **advanced** vuln.
 *  **Transfer-Encoding Header**: When SMUGGLEtest finds a vulnerability, it specifies the TE header that was used to detect the desynchronization.
 *  **Exploitation:** The program advises the user to further inform him-/herself on how to exploit the vulnerability.
 
