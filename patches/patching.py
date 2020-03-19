@@ -80,17 +80,12 @@ def patch_prepare_body(self, data, files,
 ## It is also necessary to patch the filtering functions/patterns that prevents SMUGGLEtest from obfuscating the Transfer-Encoding header.
 
 def patch_regex():
-    ''''
     requests.utils._CLEAN_HEADER_REGEX_BYTE = re.compile(
         b'.*')  ## monkey patching the Regex that filters the Transfer-Encoding header value (bytes)
-    '''
     requests.utils._CLEAN_HEADER_REGEX_STR = re.compile(
         r'.*?')  ##  monkey patching the Regex that filters the Transfer-Encoding header value (str)
-    #http.client._is_legal_header_name = re.compile(
-    #rb'.*?').search  ## monkey patching the Regex that filters the Transfer-Encoding header name  (for underlying httpclient)re.compile(
-        #rb'.*').fullmatch
     http.client._is_legal_header_name = re.compile(
-        rb'.*?').match
+        rb'.*?').match  ## monkey patching the Regex that filters the Transfer-Encoding header name  (for underlying httpclient)
     http.client._is_illegal_header_value = re.compile(
     rb'$^').search  ## monkey patching the Regex that filters the Transfer-Encoding header value (for underlying httpclient)
 
