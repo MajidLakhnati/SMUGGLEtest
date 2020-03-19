@@ -53,7 +53,7 @@ optional arguments:
 
 ## Example Output
 
-![Example output](https://github.com/MajidLakhnati/SMUGGLEtest/blob/master/tetenewresult1.png)
+![Example output](https://github.com/MajidLakhnati/SMUGGLEtest/blob/master/exampleoutput.png)
 
 When SMUGGLEtest succesfully detects a HRS vulnerability, it provides the user with following information:
 
